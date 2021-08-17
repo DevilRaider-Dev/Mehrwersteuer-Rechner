@@ -1,0 +1,10 @@
+div{
+    width: 30vw;
+    margin: 3vh auto;
+}
+div div{
+    background-color: lightgrey;
+}
+button{
+    width: 100%;
+}

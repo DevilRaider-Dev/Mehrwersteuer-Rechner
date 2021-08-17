@@ -5,20 +5,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Mehrwertsteuer-Rechner</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-<script src="assets/js/main.js"></script>
+  <div class="container">
+    <div>
+      <p>Was soll berechnet werden?</p>
+      <div>
+        <input type="radio" name="tax" id="netto" onchange="changeNetto()" checked="checked">
+        <label for="netto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+      </div>
+      <div>
+        <input type="radio" name="tax" id="brutto" onchange="changeBrutto()">
+        <label for="netto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+      </div>
+    </div>
+    <div>
+      <p>Mehrwertsteuersatz</p>
+      <input type="radio" name="taxType" id="taxHigh" checked="checked">
+      <label for="taxHigh">19%</label>
+      <input type="radio" name="taxType" id="taxLow">
+      <label for="taxLow">7%</label>
+    </div>
+    <div>
+      <p id="amountText">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</p>
+      <input type="text" name="amount" id="amount" placeholder="0,00">
+    </div>
+    <button onclick="calculateTax()">Berechnen</button>
+  </div>
+  <div class="containerResult">
+    <p>Ergebnis</p>
+    <div>
+      <p>Mehrwertsteuerbetrag</p>
+      <div>
+      <p id="resultTaxAmount">0,00 €</p>
+    </div>
+      <div>
+      <p id="resultText">Bruttobetrag (Endpreis)</p>
+      <p id="resultTax">0,00 €</p>
+    </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
