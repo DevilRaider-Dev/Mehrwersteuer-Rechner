@@ -25,7 +25,7 @@ function calculateTax() {
         document.getElementById("resultTaxAmount").innerHTML = taxAmount.toFixed(2) + " €";
         document.getElementById("resultTax").innerHTML = (input + taxAmount).toFixed(2) + " €";
     } else {
-        document.getElementById("resultTaxAmount").innerHTML = taxAmount.toFixed(2) + " €";
+        document.getElementById("resultTaxAmount").innerHTML = (input / (1+percent)).toFixed(2) + " €";
         document.getElementById("resultTax").innerHTML = (input - taxAmount).toFixed(2) + " €";
     }
 
