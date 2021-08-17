@@ -24,11 +24,11 @@ function calculateTax() {
     }
 
     if (document.getElementById("netto").checked && input != null) {
-        document.getElementById("resultTaxAmount").innerHTML = input * percent;
-        document.getElementById("resultTax").innerHTML = input * (1 + percent);
+        document.getElementById("resultTaxAmount").innerHTML = (input * percent).toFixed(2) + " €";
+        document.getElementById("resultTax").innerHTML = (input * (1 + percent)).toFixed(2) + " €";
     } else {
-        document.getElementById("resultTaxAmount").innerHTML = input * percent;
-        document.getElementById("resultTax").innerHTML = input / (1 + percent);
+        document.getElementById("resultTaxAmount").innerHTML = (input * percent).toFixed(2) + " €";
+        document.getElementById("resultTax").innerHTML = (input / (1 + percent)).toFixed(2) + " €";
     }
 
 }
