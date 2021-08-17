@@ -27,8 +27,8 @@ function calculateTax() {
     } else {
         let resTax = (input / (1+percent)).toFixed(2)
         let resTaxAmount = resTax * percent
-        document.getElementById("resultTaxAmount").innerHTML = resTaxAmount + " €";
-        document.getElementById("resultTax").innerHTML = resTax + " €";
+        document.getElementById("resultTaxAmount").innerHTML = resTaxAmount.toFixed(2) + " €";
+        document.getElementById("resultTax").innerHTML = resTax.toFixed(2) + " €";
     }
 
 }
