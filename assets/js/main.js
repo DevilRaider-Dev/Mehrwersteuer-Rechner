@@ -7,9 +7,6 @@ function changeNetto() {
     document.getElementById("resultText").innerHTML = "Bruttobetrag (Endpreis)";
 }
 
-function getPercent() {
-}
-
 function calculateTax() {
 
     let input = Number(document.getElementById("amount").value);
@@ -21,7 +18,7 @@ function calculateTax() {
     } else {
         percent = .07;
     }
-    
+
     taxAmount = input * percent;
 
     if (document.getElementById("brutto").checked && input != null) {
