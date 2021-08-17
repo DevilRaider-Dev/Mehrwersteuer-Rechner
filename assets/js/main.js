@@ -15,20 +15,21 @@ function calculateTax() {
     let input = Number(document.getElementById("amount").value);
     let percent = 0;
     let taxAmount = 0;
-    let result = 0;
 
     if (document.getElementById("taxHigh").checked) {
         percent = .19;
     } else {
         percent = .07;
     }
+    
+    taxAmount = input * percent;
 
-    if (document.getElementById("netto").checked && input != null) {
-        document.getElementById("resultTaxAmount").innerHTML = (input * percent).toFixed(2) + " €";
-        document.getElementById("resultTax").innerHTML = (input * (1 + percent)).toFixed(2) + " €";
+    if (document.getElementById("brutto").checked && input != null) {
+        document.getElementById("resultTaxAmount").innerHTML = taxAmount.toFixed(2) + " €";
+        document.getElementById("resultTax").innerHTML = (input + taxAmount).toFixed(2) + " €";
     } else {
-        document.getElementById("resultTaxAmount").innerHTML = (input * percent).toFixed(2) + " €";
-        document.getElementById("resultTax").innerHTML = (input / (1 + percent)).toFixed(2) + " €";
+        document.getElementById("resultTaxAmount").innerHTML = taxAmount.toFixed(2) + " €";
+        document.getElementById("resultTax").innerHTML = (input - taxAmount).toFixed(2) + " €";
     }
 
 }

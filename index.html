@@ -15,11 +15,11 @@
     <div>
       <p>Was soll berechnet werden?</p>
       <div>
-        <input type="radio" name="tax" id="netto" onchange="changeNetto()" checked="checked">
+        <input type="radio" name="tax" id="brutto" onchange="changeNetto()" checked="checked">
         <label for="netto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
       </div>
       <div>
-        <input type="radio" name="tax" id="brutto" onchange="changeBrutto()">
+        <input type="radio" name="tax" id="netto" onchange="changeBrutto()">
         <label for="netto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
       </div>
     </div>
@@ -32,7 +32,7 @@
     </div>
     <div>
       <p id="amountText">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</p>
-      <input type="text" name="amount" id="amount" placeholder="0,00">
+      <input type="text" name="amount" id="amount" placeholder="0.00">
     </div>
     <button onclick="calculateTax()">Berechnen</button>
   </div>
@@ -41,11 +41,11 @@
     <div>
       <p>Mehrwertsteuerbetrag</p>
       <div>
-      <p id="resultTaxAmount">0,00 €</p>
+      <p id="resultTaxAmount">0.00 €</p>
     </div>
       <div>
       <p id="resultText">Bruttobetrag (Endpreis)</p>
-      <p id="resultTax">0,00 €</p>
+      <p id="resultTax">0.00 €</p>
     </div>
     </div>
   </div>
